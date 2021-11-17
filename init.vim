@@ -157,6 +157,9 @@ call plug#end()
 	let g:netrw_banner = 0
 	let g:netrw_liststyle = 3
 
+	" Passive mode
+	let g:netrw_ftp_cmd="ftp -p"
+
 " vim-smoothie plugin configuration:
 	let g:smoothie_experimental_mappings = v:true
 
