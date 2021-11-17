@@ -101,14 +101,39 @@ call plug#end()
 	set encoding=utf-8
 
 	" Autocompletion
-	set wildmode=longest,full,list
+	set wildmenu
+
+	" Recursive path
+	set path+=**
+
+	" No conceal
+	set conceallevel=0
 
 " Basic mappings
 	nnoremap j gj
 	nnoremap k gk
 
-	" Switch numbers with <leader>sn
-	nnoremap <silent><leader>sn :set number! relativenumber!<CR>
+	" Toggle numbers visibility with <leader>tn
+	nnoremap <silent><leader>tn :set number! relativenumber!<CR>
+	" Toggle wrap with <leader>tw
+	nnoremap <silent><leader>tw :set wrap!<CR>
+
+	" Sort with <leader>s in visual mode
+	vnoremap <silent><leader>s :sort<CR>
+
+	" Substitution on s/S
+	nnoremap S :%s//g<Left><Left>
+	nnoremap <C-S> :s//g<Left><Left>
+
+	" Switching tabs with <leader>9 and <leader>0
+	nnoremap <silent><leader>9 :tabprev<CR>
+	nnoremap <silent><leader>0 :tabnext<CR>
+
+	" Compile current document with <leader>c
+	nnoremap <silent><leader>c :!compiler %<CR>
+
+	" Reload config
+	nnoremap <silent><leader>RR :source ~/.config/nvim/init.vim<CR>
 
 " File types syntax
 	autocmd BufRead,BufNewFile *.asm set filetype=nasm
@@ -153,3 +178,12 @@ call plug#end()
 	imap <C-b>  <Plug>(deoppet_jump_backward)
 	smap <C-f>  <Plug>(deoppet_jump_forward)
 	smap <C-b>  <Plug>(deoppet_jump_backward)
+
+" fugitive plugin & git mappings
+	nnoremap <silent><leader>G :G<CR>
+	nnoremap <silent><leader>gi :G init<CR>
+	nnoremap <silent><leader>gc :G commit<CR>
+	nnoremap <silent><leader>gd :G diff<CR>
+	nnoremap <silent><leader>gl :G log<CR>
+	nnoremap <silent><leader>gp :G push<CR>
+	nnoremap <leader>gg :!git<Space>
