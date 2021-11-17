@@ -1,0 +1,55 @@
+snippet !
+abbr LaTeX
+	\documentclass{article}
+
+	\usepackage{polski}
+
+	\title{${1:Title}}
+	\author{${2:Kacper Kocot}}
+	
+	\begin{document}
+	\maketitle
+	\tableofcontents
+
+	${0}
+	\end{document}
+
+snippet b
+	\textbf{${1}}${0}
+snippet i
+	\textit{${1}}${0}
+snippet t
+	\texttt{${1}}${0}
+
+snippet part
+	\part{${1}}${0}
+snippet 0
+	\chapter{${1}}${0}
+snippet 1
+	\section{${1}}${0}
+snippet 2
+	\subsection{${1}}${0}
+snippet 3
+	\subsubsection{${1}}${0}
+
+snippet beg
+abbr custom begin / end
+	\begin{${1}}
+		${3}
+	\end{${2}}${0}
+
+snippet ul
+abbr unordered list
+	\begin{itemize}
+		\item ${1}
+	\end{itemize}${0}
+
+snippet ol
+abbr ordered list
+	\begin{enumerate}
+		\item ${1}
+	\end{enumerate}${0}
+
+snippet li
+abbr item
+	\item ${0}

@@ -1,0 +1,79 @@
+snippet main
+abbr main(argc, argv)
+	int
+	main(int argc, char *argv[])
+	{
+		${0}
+		return 0;
+	}
+
+snippet mainv
+abbr main(void)
+	int
+	main(void)
+	{
+		${0}
+		return 0;
+	}
+
+snippet if
+abbr if () {}
+	if (${1:1}) {
+		${2:TARGET}
+	}
+	${0}
+
+snippet ife
+abbr if () else {}
+	if (${1:1}) {
+		${2:TARGET}
+	} else {
+		${3}
+	}
+	${0}
+
+snippet else
+abbr else () {}
+	else {
+		${1:TARGET}
+	}
+	${0}
+
+snippet elif
+abbr else () {}
+	else if (${1:1}) {
+		${2:TARGET}
+	}
+	${0}
+
+snippet in
+abbr #include <>
+	#include <${1:stdio}${2:.h}>
+	${0}
+
+snippet inq
+abbr #include ""
+	#include "${1:stdio}${2:.h}"
+	${0}
+
+snippet def
+abbr #define
+	#define ${1}
+	${0}
+
+snippet mac
+abbr #define <...>(<...>) (<...>)
+	#define ${1}(${2}) (${3})
+	${0}
+
+
+snippet     once
+options     head
+alias       include-guard
+abbr once
+	#ifndef ${1:#:SYMBOL}
+	#define ${1}
+
+	${0:TARGET}
+
+	#endif

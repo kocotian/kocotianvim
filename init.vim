@@ -34,7 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'bling/vim-airline'
 
 	" Autoclosing parenthesis, quotes, brackets, etc.
-	Plug 'Raimondi/delimitMate'
+	" Plug 'Raimondi/delimitMate'
 
 	" Indentationé
 	Plug 'Yggdroot/indentLine'
@@ -76,7 +76,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" Autocompletion and snippets
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'Shougo/neosnippet-snippets'
+	"Plug 'Shougo/neosnippet-snippets'
+	Plug 'honza/vim-snippets'
 	Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 	" LaTeX live preview
@@ -144,7 +145,7 @@ call plug#end()
 " deoppet plugin configuration:
 	call deoppet#initialize()
 	call deoppet#custom#option('snippets',
-		\ map(globpath(&runtimepath, 'neosnippets', 1, 1),
+		\ map(globpath(&runtimepath, 'snippets', 1, 1),
 		\     { _, val -> { 'path': val } }))
 
 	imap <C-k>  <Plug>(deoppet_expand)

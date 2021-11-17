@@ -1,0 +1,127 @@
+snippet !
+abbr HTML5
+	<!DOCTYPE html>
+	<html lang="${1:en}">
+		<head>
+			<meta charset="${2:UTF-8}" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">${3}
+			<title>${4:Title}</title>
+		</head>
+		<body>
+			${0}
+		</body>
+	</html>
+
+snippet metaauthor
+	<meta name="author" content="${1}">${0}
+snippet keywords
+	<meta name="keywords" content="${1}">${0}
+snippet metaothers
+	<meta name="others" content="${1}">${0}
+snippet metagenerator
+	<meta name="generator" content="${1}">${0}
+snippet metadescription
+	<meta name="description" content="${1}">${0}
+snippet metaviewport
+	<meta name="viewport" content="${1:width=device-width, initial-scale=1}">${0}
+snippet metatheme
+	<meta name="theme-color" content="#${1}">${0}
+
+snippet inccss
+	<link rel="stylesheet" href="${1}" />${0}
+snippet incjs
+	<script src="${1}"></script>${0}
+
+snippet b
+	<b>${1}</b>${0}
+snippet i
+	<i>${1}</i>${0}
+snippet u
+	<u>${1}</u>${0}
+snippet s
+	<s>${1}</s>${0}
+snippet a
+	<a href="${1}">${2}</a>${0}
+
+snippet 1
+	<h1>${1}</h1>${0}
+snippet 2
+	<h2>${1}</h2>${0}
+snippet 3
+	<h3>${1}</h3>${0}
+snippet 4
+	<h4>${1}</h4>${0}
+snippet 5
+	<h5>${1}</h5>${0}
+snippet 6
+	<h6>${1}</h6>${0}
+
+snippet img
+	<img src="${1}" alt="${2}" />${0}
+snippet imgA
+	<img src="${1}" />${0}
+
+snippet ul
+abbr unordered list
+	<ul>
+		${1}
+	</ul>
+	${0}
+
+snippet ol
+abbr ordered list
+	<ol>
+		${1}
+	</ol>
+	${0}
+
+snippet p
+abbr paragraph
+	<p>
+		${1}
+	</p>
+	${0}
+
+snippet pi
+abbr inline paragraph
+	<p>${1}</p>${0}
+
+snippet div
+abbr div
+	<div>
+		${1}
+	</div>
+	${0}
+
+snippet table
+abbr table
+	<table>
+		${1}
+	</table>
+	${0}
+
+snippet form
+abbr form
+	<form method="${1:POST}" action="${2:}">
+		${3}
+	</form>
+	${0}
+
+snippet t
+abbr custom tag (inline)
+	<${1}>${3}</${2}>${0}
+
+snippet T
+abbr custom tag (multiline)
+	<${1}>
+		${3}
+	</${2}>${0}
+
+snippet id
+	id="${1}"${0}
+
+snippet class
+	class="${1}"${0}
+
+snippet style
+	style="${1}"${0}
